@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 #include"money.hpp"
 #include"final_ingridient.hpp"
-// #include"initial_ing_amount.hpp"
+#include"feedback.hpp"
 using namespace std;
 
+//function to select coffee
 void coffee_choice()
     { 
         string choice;
@@ -18,39 +19,44 @@ void coffee_choice()
         
         if(choice=="Latte"||'l'||'L')
         {
-        	money_input latte1(200, 150, 24, 20);
-            latte1.latt();
+        	money_input latte1(200, 150, 24, 20); //class object
+            latte1.latt();  
 	    }
         else if(choice=="Espresso"||'e'||'E')
         {
-        	money_input espressor1(50, 0, 18, 30);
+        	money_input espressor1(50, 0, 18, 30); //class object
             espressor1.latt();
 	    }
         else
         {
-        	money_input cappuccino1(250, 50, 24, 50);
+        	money_input cappuccino1(250, 50, 24, 50); //class object
             cappuccino1.latt();
 		}
     }
-    final_detail g;
+final_detail g; //class object
+
+//Driver program
 int main()
 {
 	do
 	{
         int x;
-        cout<<"Select option(1/2/3):\n";
-        cout<<"-----------------------    -----------------------    -----------------------\n";
+        cout<<"Select option(1/2/3/4):\n";
+        cout<<"-----------------------    -----------------------    -----------------------    -----------------------\n";
         cout<<"|        Coffee:      |";
         cout<<"    |Remaining ingridient:|";
+        cout<<"    |       Feedback      |";
         cout<<"    |        Exit:        |\n";
-        cout<<"-----------------------    -----------------------    -----------------------\n\n";
+        cout<<"-----------------------    -----------------------    -----------------------    -----------------------\n\n";
         cin>>x;
         cout<<"\n";
         if(x==1)
             coffee_choice();
-        else if(x==3)
-            exit(0);
         else if(x==2)
             g.final(value1(), value2(), value3(), value4());
+        else if(x==3)
+            newfeedback();
+        else if(x==4)
+            exit(0);
     }while(1);
 }

@@ -12,13 +12,13 @@ float value4();
 class money_input: public ingridient
 {
     public:
-    money_input(float a,float b, float c, float d):ingridient(a,b,c,d){ };
-    void latt()
+    money_input(float a,float b, float c, float d):ingridient(a,b,c,d){ };  //contructor
+    void latt()  // function to call remaning_amount() and coffee_cost() function
     {
-        ingridient::remaning_amount();
-        ingridient::coffee_cost();
+        ingridient::remaning_amount(); // to calculate remaining_ingridient
+        ingridient::coffee_cost(); //to select mode of payment
     }
 };
     
 #endif
-//undefined reference to `ingridient::coffee_cost()
+

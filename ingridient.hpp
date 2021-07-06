@@ -1,3 +1,5 @@
+// function declaration
+
 #ifndef ingridient_hpp
 #define ingridient_hpp
 #include"calculation.hpp"
@@ -12,13 +14,13 @@ class ingridient:public calculation
     float cost;
     
     //constructor
-    ingridient(float a,float b, float c,float d)
+    ingridient(float a,float b, float c,float d)  //constructor
 	{
 	    water=a;   milk=b;  coffee=c;   cost=d;
 	}
 	
-	void coffee_cost();
-	void remaning_amount();
+	void coffee_cost();  // function to select mode of payment
+	void remaning_amount(); //to calculate remaining
 
 };
         	

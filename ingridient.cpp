@@ -9,14 +9,14 @@ using namespace std;
 void ingridient::coffee_cost()
 {
     int n;
-	cout<<"Pay "<<cost<<" rupees Using"<<endl; 
+	cout<<"Pay "<<cost<<" rupees Using"<<endl; //amount to pay 
    //Payment method
     cout<<"-----------------------    -----------------------    -----------------------\n";
     cout<<"|         UPI:        |";
     cout<<"    |        Cash:        |";
     cout<<"    |   Swiping machine:  |\n";
     cout<<"-----------------------    -----------------------    -----------------------\n";
-    cout<<"Select Method to pay(1/2/3): ";  cin>>n;   //select method
+    cout<<"Select Method to pay(1/2/3): ";  cin>>n;   //select method to pay money
 		
 	if(n==1)
 	    calculation::pay_money_UPI();
@@ -25,14 +25,15 @@ void ingridient::coffee_cost()
 	else
 		calculation::pay_money_SM();
 }
-	//function to calculate remaning amount
+	//function to calculate remaning amount of ingridient
 void ingridient::remaning_amount()
 {
-	water_total=water_total - water;
-	milk_total-=milk;
-	coffee_total-=coffee;
-    cost_total+=cost;
-    if(water_total<=0||milk_total<=0||coffee_total<=0||cost_total<=0)
+	water_total=water_total - water;   //remaining_water
+	milk_total-=milk;			//remaining_milk
+	coffee_total-=coffee;		//remaining_coffee
+    cost_total+=cost;			//remaining_cost
+
+    if(water_total<=0||milk_total<=0||coffee_total<=0||cost_total<=0)  //if sufficient amounnt is not available
     {
     	cout<<"Sufficient ingridient are not available:\n ";
 		cout<<setw(60)<<"Sorry for the Inconvenience:\n";
@@ -41,7 +42,8 @@ void ingridient::remaning_amount()
 	}
 }	
 
-float value1()
+// these 4 function is used to pass details of remaining_ingridient to final() function declare in class final_detail
+float value1()  
 {	
 	return water_total;
 	}

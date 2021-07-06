@@ -1,5 +1,5 @@
 file:
-	g++ main.cpp calculation.cpp final_ingridient.cpp ingridient.cpp -o main.exe
+	g++ main.cpp calculation.cpp final_ingridient.cpp ingridient.cpp feedback.cpp -o main.exe
 
 exe:
 	./main.exe	
