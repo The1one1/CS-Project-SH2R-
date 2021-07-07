@@ -39,7 +39,7 @@ namespace example
 		{
 			cout<<"Sufficient ingridient are not available:\n ";
 			cout<<setw(60)<<"Sorry for the Inconvenience:\n";
-			cout<<"----------------------------------------------------------------------\n";
+			cout<<"---------------------------------------------------------------------------------------------------------\n";
 			exit(0);
 		}
 	}	

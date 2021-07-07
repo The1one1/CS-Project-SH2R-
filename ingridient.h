@@ -5,6 +5,11 @@ using namespace std;
 
 namespace example
 {
+	float value1();
+    float value2();
+    float value3();
+    float value4();
+    
     class ingridient:public calculation
     {
         private:

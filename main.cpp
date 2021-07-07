@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
-#include"money.h"
+//#include"money.h"
 #include"final_ingridient.h"
 #include"feedback.h"
+#include"ingridient.h"
 using namespace std;
 
 using example::calculation;
 using example::feedback;
 using example::final_detail;
 using example::ingridient;
-using example::money_input;
+//using example::money_input;
 using example::newfeedback;
 using example::printfeedback;
 using example::value1;
@@ -31,18 +32,24 @@ void coffee_choice()
     
     if(choice=="Latte"||'l'||'L')
     {
-        money_input latte1(200, 150, 24, 20);   //class object
-        latte1.latt();  
+        ingridient latte1(200, 150, 24, 20);   //class object
+//        latte1.latt();
+		latte1.coffee_cost();
+		latte1.remaning_amount(); 
     }
     else if(choice=="Espresso"||'e'||'E')
     {
-        money_input espressor1(50, 0, 18, 30);  //class object
-        espressor1.latt();
+        ingridient espressor1(50, 0, 18, 30);  //class object
+//        espressor1.latt();
+		espressor1.coffee_cost();
+		espressor1.remaning_amount();
     }
     else
     {
-        money_input cappuccino1(250, 50, 24, 50);   //class object
-        cappuccino1.latt();
+        ingridient cappuccino1(250, 50, 24, 50);   //class object
+//        cappuccino1.latt();
+		cappuccino1.coffee_cost();
+		cappuccino1.remaning_amount();
     }
 }
 final_detail g;     //class object
