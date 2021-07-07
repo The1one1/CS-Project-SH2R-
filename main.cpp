@@ -56,8 +56,8 @@ int main()
         cout<<"Select option(1/2/3/4):\n";
         cout<<"-----------------------    -----------------------    -----------------------    -----------------------\n";
         cout<<"|        Coffee:      |";
-        cout<<"    |Remaining ingridient:|";
         cout<<"    |       Feedback      |";
+        cout<<"    |     Owner-Access    |";
         cout<<"    |        Exit:        |\n";
         cout<<"-----------------------    -----------------------    -----------------------    -----------------------\n\n";
         cin>>x;
@@ -65,9 +65,9 @@ int main()
         if(x==1)
             coffee_choice();
         else if(x==2)
-            g.final(value1(), value2(), value3(), value4());
-        else if(x==3)
             newfeedback();
+        else if(x==3)
+            g.final(value1(), value2(), value3(), value4());
         else if(x==4)
             exit(0);
     }
