@@ -4,6 +4,15 @@ using namespace std;
 
 namespace example
 {
+
+    feedback::feedback()  //constructor
+    {
+        rating=5;
+        strcpy(name, "Rahul");
+        strcpy(f_back, "Nice coffee");
+        next=0;
+    }
+
     feedback *head=0, *new_feedback, *temp;     //class objects
 
     void newfeedback()      // function to take feedback

@@ -17,11 +17,7 @@ namespace example
         
         public:
             float cost;
-
-            ingridient(float a, float b, float c, float d)    //constructor
-            {
-                water=a;   milk=b;  coffee=c;   cost=d;
-            }
+            ingridient(float a, float b, float c, float d);    //constructor
             void coffee_cost();     // function to select mode of payment
             void remaning_amount();     //to calculate remaining
     };

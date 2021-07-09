@@ -5,7 +5,7 @@
 #include"ingridient.h"
 using namespace std;
 
-using example::calculation;
+// using example::calmainculation;
 using example::feedback;
 using example::final_detail;
 using example::ingridient;
