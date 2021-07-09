@@ -6,15 +6,22 @@ namespace example
 {
 	void calculation::pay_money_UPI()	//pay cash money
 	{
-		cout<<setw(47)<<"|------------|\n";
-		cout<<setw(47)<<"|------------|\n";
-		cout<<setw(47)<<"|scan QR code|\n";
-		cout<<setw(47)<<"|------------|\n";
-		cout<<setw(47)<<"|------------|\n";
+	cout<<"enter the amount:";
+		cin>>_money;
+		if(_money>=cost)
+		{
+			
+		_money-=cost;	//to calculate refundable money
+		if(_money>0) cout<<"Refundable amount:"<<_money<<"\n";
 		cout<<"Here is your coffee  |    |\n";
 		cout<<"                     |____|\n";
 		cout<<setw(60)<<"Thanks for Using Our Service:\n\n";
-		cout<<"---------------------------------------------------------------------------------------------------------\n";
+		cout<<"------------------------------------------------------------------------------------------------------\n";
+		
+		
+		}
+		else
+		cout<<"Sorry that's not enough money.Money refunded."<<"\n";
 	}
 
 	void calculation::pay_money_SM()	//pay using Swiping machine
