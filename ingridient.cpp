@@ -8,6 +8,10 @@ using namespace std;
 namespace example
 {
 	//latte1(200, 150, 24, 20), espressor1(50, 0, 18, 30), cappuccino1(250, 50, 24, 50);
+	ingridient::ingridient(float a, float b, float c, float d)    //constructor
+    {
+        water=a;   milk=b;  coffee=c;   cost=d;
+    }
 	void ingridient::coffee_cost()
 	{
 		int n;

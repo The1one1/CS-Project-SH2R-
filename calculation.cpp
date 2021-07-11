@@ -6,22 +6,15 @@ namespace example
 {
 	void calculation::pay_money_UPI()	//pay cash money
 	{
-	cout<<"enter the amount:";
-		cin>>_money;
-		if(_money>=cost)
-		{
-			
-		_money-=cost;	//to calculate refundable money
-		if(_money>0) cout<<"Refundable amount:"<<_money<<"\n";
+		cout<<setw(30)<<"|------------|\n";
+		cout<<setw(30)<<"|------------|\n";
+		cout<<setw(30)<<"|scan QR code|\n";
+		cout<<setw(30)<<"|------------|\n";
+		cout<<setw(30)<<"|------------|\n";
 		cout<<"Here is your coffee  |    |\n";
 		cout<<"                     |____|\n";
 		cout<<setw(60)<<"Thanks for Using Our Service:\n\n";
-		cout<<"------------------------------------------------------------------------------------------------------\n";
-		
-		
-		}
-		else
-		cout<<"Sorry that's not enough money.Money refunded."<<"\n";
+		cout<<"---------------------------------------------------------------------------------------------------------\n";
 	}
 
 	void calculation::pay_money_SM()	//pay using Swiping machine
@@ -43,11 +36,18 @@ namespace example
 	{
 		cout<<"enter the amount:";
 		cin>>_money;
-		_money-=cost;	//to calculate refundable money
-		if(_money>0) cout<<"Refundable amount:"<<_money<<"\n";
-		cout<<"Here is your coffee  |    |\n";
-		cout<<"                     |____|\n";
-		cout<<setw(60)<<"Thanks for Using Our Service:\n\n";
-		cout<<"--------------------------------------------------------------------------------------------------------\n";
+		if(_money>=cost)
+		{
+			_money-=cost;	//to calculate refundable money
+			if(_money>0) cout<<"Refundable amount:"<<_money<<"\n";
+			cout<<"Here is your coffee  |    |\n";
+			cout<<"                     |____|\n";
+			cout<<setw(60)<<"Thanks for Using Our Service:\n\n";
+			cout<<"--------------------------------------------------------------------------------------------------------\n";
+		}
+		else
+		{
+			cout<<"Sorry, We can't give you coffee.Your "<<_money<<" rupees is Refunded:\n";
+		}
 	}
 }
